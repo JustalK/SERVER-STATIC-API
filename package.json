@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "build:docs": "npx jsdoc -r ./src ./README.md"
+    "build:docs": "npx jsdoc -r ./src ./README.md",
+    "test": "cypress run",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "@apollo/client": "^3.3.11",
@@ -17,6 +19,7 @@
     "react-dom": "17.0.1"
   },
   "devDependencies": {
+    "cypress": "^6.5.0",
     "jsdoc": "^3.6.6"
   }
 }
