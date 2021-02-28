@@ -1,7 +1,9 @@
-const servicesPost = require('../../services/post')
+`use strict`
+
+import { getPosts } from '@src/services/post'
 
 export async function getStaticProps() {
-  return servicesPost.getPosts()
+  return getPosts()
 }
 
 const Home = ({ posts }) => {
