@@ -30,7 +30,11 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
+# The lock json
 package-lock.json
+
+# The jsdoc
+out
 
 # vercel
 .vercel
