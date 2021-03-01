@@ -4,10 +4,13 @@ orbs:
 
 jobs:
   e2e:
+    docker:
+      - image: circleci/node:15.10.0
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD
     steps:
-      - run:
-        name: Run end to end tests
-        command: npm run e2e
+      - run: npm run e2e
 
 workflows:
   node-tests:
