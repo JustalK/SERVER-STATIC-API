@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "build:docs": "npx jsdoc -r ./src ./README.md",
-    "test": "cypress run",
+    "e2e": "start-test dev 3000 cypress:run",
+    "cypress:run": "cypress run",
     "cypress:open": "cypress open"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "cypress": "^6.5.0",
-    "jsdoc": "^3.6.6"
+    "jsdoc": "^3.6.6",
+    "start-server-and-test": "^1.12.0"
   }
 }

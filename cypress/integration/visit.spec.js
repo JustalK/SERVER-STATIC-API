@@ -1,10 +1,8 @@
 /// <reference types="cypress" />
 
 context('Window', () => {
-  beforeEach(() => {
-    cy.visit('http://localhost:3000/home')
-  })
-
-  it('Random test', () => {
+  it('API works', () => {
+    cy.visit('/')
+    cy.contains('h1', 'Welcome')
   })
 })
