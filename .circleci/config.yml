@@ -2,20 +2,9 @@ version: 2.1
 orbs:
   cypress: cypress-io/cypress@1.0.1
   node: circleci/node@3.0.0
-jobs:
-  run_tests:
-    docker:
-      - image: circleci/node:15
-    steps:
-      - checkout
-      - run:
-          name: Install npm dependencies
-          command: |
-            sudo npm install
-      - run:
-          name: Run Unit Tests
-          command: 'npm run e2e'
 workflows:
-  build_test:
+  build:
     jobs:
-      - run_tests
+      - cypress/run:
+          build: "npm run build:wait"
+          record: true
