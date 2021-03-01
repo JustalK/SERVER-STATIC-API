@@ -1,6 +1,14 @@
 version: 2.1
 orbs:
   node: circleci/node@3.0.0
+
+jobs:
+  e2e:
+    steps:
+      - run:
+        name: Run end to end tests
+        command: npm run e2e
+
 workflows:
   node-tests:
     jobs:
