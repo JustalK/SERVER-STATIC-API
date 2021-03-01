@@ -5,6 +5,4 @@ orbs:
 workflows:
   build:
     jobs:
-      - cypress/run:
-          build: "npm run build:wait"
-          record: true
+      - node/test
