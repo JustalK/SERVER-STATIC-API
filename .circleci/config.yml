@@ -1,18 +1,7 @@
 version: 2.1
 orbs:
   node: circleci/node@3.0.0
-
-jobs:
-  e2e:
-    docker:
-      - image: circleci/node:latest
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD
-    steps:
-      - run: npm run e2e
-
 workflows:
   node-tests:
     jobs:
-      - e2e
+      - node/test
