@@ -11,6 +11,7 @@ import { getPosts } from '@src/services/post'
 * Get all the posts at build time
 * @return {Post[]} All the posts in the database
 **/
+/* istanbul ignore next */
 export async function getStaticProps() {
   return getPosts()
 }
@@ -22,13 +23,12 @@ export async function getStaticProps() {
 * @return {Object} The html of the home
 **/
 const Home = ({ posts }) => {
-  console.log('posts', posts)
   return (
     <div>
-      <h1>Home</h1>
-      <div>
-      })}
-      </div>
+      <h1>Page</h1>
+      {posts.map((post, index) => (
+        <p key={index}>{post.title}</p>
+      ))}
     </div>
   )
 }
