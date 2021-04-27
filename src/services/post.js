@@ -23,8 +23,7 @@ export async function getPosts() {
   const { posts } = await graphCmsClient.request(
     `
     query {
-      posts {
-        id,
+      page {
         title
       }
     }
