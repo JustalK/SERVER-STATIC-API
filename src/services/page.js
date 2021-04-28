@@ -2,8 +2,6 @@
 * The module for managing the request for the Page
 * @module services/Page
 */
-`use strict`
-
 /**
  * The Page object
  * @typedef {Object} Page
@@ -13,12 +11,14 @@
 
 import graphCmsClient from '@src/services/libs/graphCmsClient'
 
+'use strict'
+
 /**
 * @function getPages
 * Get all the Pages from graphcms
 * @return {Page[]} All the Pages in the database
 **/
-export async function getPages() {
+export async function getPages () {
   const { pages } = await graphCmsClient.request(
     `
     query {
@@ -27,11 +27,11 @@ export async function getPages() {
       }
     }
   `
-  );
+  )
 
   return {
     props: {
       pages
-    },
-  };
+    }
+  }
 }

@@ -2,9 +2,9 @@
 * The home page
 * @module pages/home
 */
-`use strict`
-
 import { getPages } from '@src/services/page'
+
+'use strict'
 
 /**
 * @function getStaticProps
@@ -12,7 +12,7 @@ import { getPages } from '@src/services/page'
 * @return {Post[]} All the pages in the database
 **/
 /* istanbul ignore next */
-export async function getStaticProps() {
+export async function getStaticProps () {
   return getPages()
 }
 
