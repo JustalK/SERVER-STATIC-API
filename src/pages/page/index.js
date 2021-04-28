@@ -4,29 +4,29 @@
 */
 `use strict`
 
-import { getPosts } from '@src/services/post'
+import { getPages } from '@src/services/page'
 
 /**
 * @function getStaticProps
-* Get all the posts at build time
-* @return {Post[]} All the posts in the database
+* Get all the pages at build time
+* @return {Post[]} All the pages in the database
 **/
 /* istanbul ignore next */
 export async function getStaticProps() {
-  return getPosts()
+  return getPages()
 }
 
 /**
 * @function Home
 * render the home page
-* @param {Post[]} posts The list of Post
+* @param {Post[]} pages The list of Post
 * @return {Object} The html of the home
 **/
-const Home = ({ posts }) => {
+const Home = ({ pages }) => {
   return (
     <div>
       <h1>Page</h1>
-      {posts.map((post, index) => (
+      {pages.map((post, index) => (
         <p key={index}>{post.title}</p>
       ))}
     </div>
